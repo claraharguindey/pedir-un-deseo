@@ -5,6 +5,7 @@ body {
   background-color: #eaf6fa;
   position: relative;
   height: 100vh;
+  font-family: monospace;
 }
 
 .text1,
@@ -16,80 +17,49 @@ body {
 }
 
 .icon {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 80px;
+  max-height: 80px;
   cursor: pointer;
-}
-
-.text1 {
-  color: red;
-}
-
-.text2 {
-  color: green;
-}
-
-.text3 {
-  color: pink;
-}
-
-.text4 {
-  color: black;
-}
-
-.icon1:hover
-  + .text1
-  + .icon2
-  + .text2
-  + .icon3
-  + .text3
-  + .icon4
-  + .text4
-  + .icon5
-  + .text5
-  + .text0 {
-  display: none;
-}
-
-.icon1:hover + .text1 {
-  display: block;
-}
-
-.icon2:hover
-  + .text2
-  + .icon3
-  + .text3
-  + .icon4
-  + .text4
-  + .icon5
-  + .text5
-  + .text0 {
-  display: none;
-}
-
-.icon2:hover + .text2 {
-  display: block;
-}
-
-.icon3:hover + .text3 {
-  display: block;
-}
-
-.icon3:hover + .text3 + .icon4 + .text4 + .icon5 + .text5 + .text0 {
-  display: none;
-}
-
-.icon4:hover + .text4 {
-  display: block;
-}
-
-.icon4:hover + .text4 + .icon5 + .text5 + .text0 {
-  display: none;
-}
-
-.icon {
   position: absolute;
-  top: 0;
+}
+
+.icon1,
+.icon2,
+.icon3,
+.icon4,
+.icon5 {
+  top: -100px;
+}
+
+.icon1 {
+  left: 40px;
+}
+.icon2 {
+  left: 150px;
+}
+.icon3 {
+  left: 280px;
+}
+.icon4 {
+  left: 390px;
+}
+.icon5 {
+  left: 500px;
+}
+.icon1:hover + .icon2 + .icon3 + .icon4 + .icon5 + .text0,
+.icon2:hover + .icon3 + .icon4 + .icon5 + .text0,
+.icon3:hover + .icon4 + .icon5 + .text0,
+.icon4:hover + .icon5 + .text0,
+.icon5:hover + .text0 {
+  display: none;
+}
+
+.icon1:hover + .icon2 + .icon3 + .icon4 + .icon5 + .text0 + .text1,
+.icon2:hover + .icon3 + .icon4 + .icon5 + .text0 + .text1 + .text2,
+.icon3:hover + .icon4 + .icon5 + .text0 + .text1 + .text2 + .text3,
+.icon4:hover + .icon5 + .text0 + .text1 + .text2 + .text3 + .text4,
+.icon5:hover + .text0 + .text1 + .text2 + .text3 + .text4 + .text5 {
+  display: block;
 }
 
 article {
@@ -100,4 +70,25 @@ article {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 30px;
+  height: 250px;
+  width: 600px;
+  text-align: center;
+}
+
+.button {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.instructions {
+  height: 200px;
+  background-color: #eaf6fa;
+  border: 3px dashed #050070;
+  padding: 20px;
+}
+
+.note {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
