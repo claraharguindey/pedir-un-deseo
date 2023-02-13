@@ -1,0 +1,103 @@
+body {
+  color: #050070;
+  padding: 30px;
+  font-family: sans-serif;
+  background-color: #eaf6fa;
+  position: relative;
+  height: 100vh;
+}
+
+.text1,
+.text2,
+.text3,
+.text4,
+.text5 {
+  display: none;
+}
+
+.icon {
+  max-width: 100px;
+  max-height: 100px;
+  cursor: pointer;
+}
+
+.text1 {
+  color: red;
+}
+
+.text2 {
+  color: green;
+}
+
+.text3 {
+  color: pink;
+}
+
+.text4 {
+  color: black;
+}
+
+.icon1:hover
+  + .text1
+  + .icon2
+  + .text2
+  + .icon3
+  + .text3
+  + .icon4
+  + .text4
+  + .icon5
+  + .text5
+  + .text0 {
+  display: none;
+}
+
+.icon1:hover + .text1 {
+  display: block;
+}
+
+.icon2:hover
+  + .text2
+  + .icon3
+  + .text3
+  + .icon4
+  + .text4
+  + .icon5
+  + .text5
+  + .text0 {
+  display: none;
+}
+
+.icon2:hover + .text2 {
+  display: block;
+}
+
+.icon3:hover + .text3 {
+  display: block;
+}
+
+.icon3:hover + .text3 + .icon4 + .text4 + .icon5 + .text5 + .text0 {
+  display: none;
+}
+
+.icon4:hover + .text4 {
+  display: block;
+}
+
+.icon4:hover + .text4 + .icon5 + .text5 + .text0 {
+  display: none;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+}
+
+article {
+  border: 3px dashed #050070;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+}
