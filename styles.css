@@ -1,65 +1,13 @@
 body {
   color: #050070;
-  padding: 30px;
   font-family: sans-serif;
   background-color: #eaf6fa;
-  position: relative;
   height: 100vh;
   font-family: monospace;
 }
 
-.text1,
-.text2,
-.text3,
-.text4,
-.text5 {
-  display: none;
-}
-
-.icon {
-  max-width: 80px;
-  max-height: 80px;
-  cursor: pointer;
-  position: absolute;
-}
-
-.icon1,
-.icon2,
-.icon3,
-.icon4,
-.icon5 {
-  top: -100px;
-}
-
-.icon1 {
-  left: 40px;
-}
-.icon2 {
-  left: 150px;
-}
-.icon3 {
-  left: 280px;
-}
-.icon4 {
-  left: 390px;
-}
-.icon5 {
-  left: 500px;
-}
-.icon1:hover + .icon2 + .icon3 + .icon4 + .icon5 + .text0,
-.icon2:hover + .icon3 + .icon4 + .icon5 + .text0,
-.icon3:hover + .icon4 + .icon5 + .text0,
-.icon4:hover + .icon5 + .text0,
-.icon5:hover + .text0 {
-  display: none;
-}
-
-.icon1:hover + .icon2 + .icon3 + .icon4 + .icon5 + .text0 + .text1,
-.icon2:hover + .icon3 + .icon4 + .icon5 + .text0 + .text1 + .text2,
-.icon3:hover + .icon4 + .icon5 + .text0 + .text1 + .text2 + .text3,
-.icon4:hover + .icon5 + .text0 + .text1 + .text2 + .text3 + .text4,
-.icon5:hover + .text0 + .text1 + .text2 + .text3 + .text4 + .text5 {
-  display: block;
+summary::marker {
+  content: '';
 }
 
 article {
@@ -75,13 +23,72 @@ article {
   text-align: center;
 }
 
+.icon {
+  max-width: 80px;
+  max-height: 80px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.detail-browser,
+.detail-battery,
+.detail-mail,
+.detail-calendar,
+.detail-folder {
+  position: absolute;
+  max-width: 300px;
+}
+
+.detail-browser {
+  top: 150px;
+  right: 450px;
+  width: 100%;
+}
+
+.detail-battery {
+  bottom: 200px;
+  right: 260px;
+  width: 100%;
+}
+
+.detail-mail {
+  bottom: 220px;
+  left: 420px;
+  width: 100%;
+}
+
+.detail-calendar {
+  top: 125px;
+  left: 410px;
+  width: 100%;
+}
+
+.detail-folder {
+  top: 100px;
+  right: 200px;
+  width: 100%;
+}
+
+.text {
+  border: 3px dashed #050070;
+  background-color: #eaf6fa;
+  position: absolute;
+  padding: 20px;
+  top: 80px;
+  z-index: 2;
+}
+
+.text-mail,
+.text-battery {
+  top: -320px;
+}
+
 .button {
   text-decoration: underline;
   cursor: pointer;
 }
 
 .instructions {
-  height: 200px;
   background-color: #eaf6fa;
   border: 3px dashed #050070;
   padding: 20px;
@@ -89,6 +96,6 @@ article {
 
 .note {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 10px;
+  right: 20px;
 }
